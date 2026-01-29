@@ -1,0 +1,187 @@
+body {
+    padding-top: 70px;
+    margin: 0;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #038013;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fixed-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.kosar {
+    position: relative;
+    font-size: 24px;
+    padding-right: 20px;
+}
+
+.lilicon {
+    position: absolute;
+    top: -12px;
+    right: -30px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #eee;
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 18px;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+    cursor: pointer;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    z-index: 999;
+}
+
+.submenu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.content {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.kartya {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    position: relative;
+    background: white;
+    flex-shrink: 0;
+}
+
+.kartya img {
+    width: 100%;
+    height: auto;
+}
+
+.kiemelt {
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 900px) {
+    .kartya {
+        width: 45%;
+    }
+
+    .fixed-header h1 {
+        font-size: 20px;
+    }
+
+    .menu {
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .kartya {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .kiemelt {
+        right: -20px;
+        padding: 5px 25px;
+    }
+
+    .fixed-header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu li {
+        padding: 10px 0;
+    }
+
+    .kosar {
+        margin-top: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+}
